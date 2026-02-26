@@ -96,6 +96,8 @@ jobs:
         with:
           context: ./frontend
           push: true
+          build-args: |
+            REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/devops-frontend:latest
             ${{ secrets.DOCKER_HUB_USERNAME }}/devops-frontend:${{ github.sha }}
