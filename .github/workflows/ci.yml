@@ -111,6 +111,8 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     steps:
-      - name: Trigger Render Deployment
-        # Sử dụng curl để gọi Deploy Hook của Render
-        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+      - name: Deploy Backend to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_BACKEND }}
+
+      - name: Deploy Frontend to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_FRONTEND }}
