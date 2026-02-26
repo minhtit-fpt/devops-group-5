@@ -1,5 +1,5 @@
 # Collaborator
-Add minh-fpt to README
+Add minh-fpt to README.
 
 # DevOps Base Project
 
