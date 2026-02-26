@@ -9,13 +9,13 @@ on:
 
 jobs:
   # ==========================================
-  # JOB 1: Build and Test (CI)
+  # JOB 1: Build and Test
   # ==========================================
   build-and-test:
     name: Build & Test
     runs-on: ubuntu-latest
 
-    # PostgreSQL service dành cho việc chạy Unit Test
+    # PostgreSQL service for testing
     services:
       postgres:
         image: postgres:15-alpine
@@ -112,5 +112,5 @@ jobs:
 
     steps:
       - name: Trigger Render Deployment
-        # Sử dụng curl để gọi Deploy Hook "nút bấm ma thuật" của Render
+        # Sử dụng curl để gọi Deploy Hook của Render
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
