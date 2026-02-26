@@ -1,3 +1,6 @@
+# Collaborator
+Add minh-fpt to README
+
 # DevOps Base Project
 
 ## Project Overview
