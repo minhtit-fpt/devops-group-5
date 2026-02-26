@@ -46,6 +46,10 @@ jobs:
         working-directory: ./backend
         run: npm install
 
+      - name: Initialize database
+        run: |
+          PGPASSWORD=postgres123 psql -h localhost -U postgres -d tododb -f ./database/database.sql
+
       - name: Run tests
         working-directory: ./backend
         run: npm test
