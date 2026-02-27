@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-and-test
     # Chỉ push image khi đã merge vào nhánh main
-    if: github.event_name == 'push' 
+    if: .event_name == 'push' 
 
     steps:
       - name: Checkout code
