@@ -17,7 +17,7 @@ const pool = new Pool({
    port: process.env.DB_PORT || 5432,
 });
 
-.get('/health', (req, res) => {
+app.get('/health', (req, res) => {
    res.json({ status: 'healthy', version: '1.0.0' });
 });
 
